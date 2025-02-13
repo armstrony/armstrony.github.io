@@ -28,6 +28,7 @@ function App() {
         </nav>
 
         <main className="main px-16">
+          {/* Hero Section */}
           <section className="hero">
             <h1 className="hero-title text-[84px] bg-gradient-to-r from-green-hero to-pink-hero bg-clip-text text-transparent font-bold h-lvh flex justify-center items-center">
               <TypeAnimation
@@ -45,14 +46,13 @@ function App() {
                 repeat={Infinity}
               />
             </h1>
-            {/* <h1
-              className="hero-title text-[84px] bg-gradient-to-r 
-            from-green-hero to-pink-hero 
-            bg-clip-text text-transparent font-bold h-dvh flex justify-center items-center"
-            >
-              Hi, I’m Hafie—just a normal person who loves discovering new
-              things in tehc.
-            </h1> */}
+            {/* Circular Gradients */}
+            <div className="absolute inset-0 pointer-events-none">
+              {/* Top-Left Gradient */}
+              <div className="absolute -top-10 -left-10 w-35 h-35 rounded-full bg-emerald-400 opacity-75 blur-[75px]"></div>
+              {/* Bottom Right Gradient */}
+              <div className="absolute bottom-[25%] -right-10 w-35 h-35 rounded-full bg-blue-900 opacity-75 blur-[75px]"></div>
+            </div>
           </section>
         </main>
       </div>
