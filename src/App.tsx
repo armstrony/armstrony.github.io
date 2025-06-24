@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <div className="homepage container mx-auto">
-        <nav className="navbar relative flex flex-row px-16 py-10 border-b-0">
+        <nav className="navbar relative flex flex-row px-10 py-6 border-b-0">
           <div className="flex w-full justify-between relative">
             <span className="font-semibold uppercase tracking-[4px]" id="hafie">
               hafie
@@ -27,14 +27,14 @@ function App() {
           </div>
         </nav>
 
-        <main className="main px-16">
+        <main className="main px-16 text-center">
           {/* Hero Section */}
           <section className="hero">
             <h1 className="hero-title text-[84px] bg-gradient-to-r from-green-hero to-pink-hero bg-clip-text text-transparent font-bold h-lvh flex justify-center items-center">
               <TypeAnimation
                 preRenderFirstString={true}
                 sequence={[
-                  "Hi, I’m Hafie—just a normal person who loves discovering new things in tehc...",
+                  "Hi, I’m Hafie—just a normal person who loves discovering new things in tech...",
                   1000,
                   "Hi, I’m Hafie—just a normal person who loves discovering new things in business...",
                   1000,
