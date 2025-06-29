@@ -9,7 +9,7 @@ const AboutMeSection = () => {
         <div className="md:w-3/5 space-y-4 text-gray-400">
           <p>Hello, i’m Hafi!</p>
           <p>
-            I’m a self-taught front-end developer based in Kyiv, Ukraine. I can
+            I’m a self-taught front-end developer based in Indonesia. I can
             develop responsive websites from scratch and raise them into modern
             user-friendly web experiences.
           </p>
