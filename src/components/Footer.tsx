@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import { Github } from "lucide-react";
 
 const Footer = () => {
@@ -7,9 +7,11 @@ const Footer = () => {
       <div className="flex flex-col md:flex-row justify-between items-center gap-4">
         <div className="text-center md:text-left">
           <p className="text-white font-semibold">
-            Hafi <span className="text-gray-400">Hafi.dev@proton.me</span>
+            Hafi <span className="text-gray-400">developer.hafi@gmail.com</span>
           </p>
-          <p className="text-gray-400">Web designer and front-end developer</p>
+          <p className="text-gray-400">
+            iOS Devs, Web Devs, and front-end developer
+          </p>
         </div>
         <div>
           <h3 className="text-white text-xl mb-2">Media</h3>
