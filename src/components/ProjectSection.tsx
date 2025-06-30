@@ -13,38 +13,42 @@ interface Project {
 
 const projectsData: Project[] = [
   {
-    title: "ChertNodes",
-    image: "https://placehold.co/100x50/3a3f4b/ffffff?text=ChertNodes",
-    bgColor: "bg-gray-800/50",
-    tech: ["HTML", "SCSS", "Python", "Flask"],
-    description: "Minecraft servers hosting",
+    title: "Chromatch",
+    image: "src/assets/chromatch.jpeg",
+    bgColor: "bg-pink-800/50",
+    tech: ["Swift", "SwiftUI", "Vision", "SwiftData", "VideoToolbox"],
+    description:
+      "Chromatch helps you discover your personal color season, empowering you to choose makeup and clothing that truly complement your natural beauty. Say goodbye to uncertainty and hello to confident purchasing decisions!",
     liveLink: "#",
     cachedLink: "#",
   },
   {
-    title: "ProtectX",
-    image: "https://placehold.co/100x50/2b423c/ffffff?text=ProtectX",
+    title: "Coffice",
+    image: "src/assets/coffice.png",
     bgColor: "bg-green-900/20",
-    tech: [
-      "React",
-      "Express",
-      "Discord.js",
-      "Node.js",
-      "HTML",
-      "SCSS",
-      "Python",
-      "Flask",
-    ],
-    description: "Discord anti-crash bot",
+    tech: ["Swift", "SwiftUI", "Core Location", "HealthKit", "Core Motion"],
+    description:
+      "An iOS app built with SwiftUI that helps users discover coffee shops within Green Office Park, BSD – Tangerang. Designed with privacy, efficiency, and user experience in mind using Apple-native frameworks: CoreLocation, CoreMotion, MapKit, and HealthKit.",
     liveLink: "#",
     cachedLink: "#",
   },
   {
-    title: "Kahoot Answers",
-    image: "https://placehold.co/100x50/4d2e8e/ffffff?text=Kahoot!",
+    title: "MeFoRa",
+    image: "src/assets/MeFoRa.png",
+    bgColor: "bg-blue-900/20",
+    tech: ["Android", "Kotlin", "Jetpack Compose", "Firebase"],
+    description:
+      "An app that helps users with specific health conditions make informed dietary choices by providing personalized lists of recommended and restricted foods based on their illness.",
+    liveLink: "#",
+    cachedLink: "#",
+  },
+  {
+    title: "Project Livium",
+    image: "src/assets/livium.png",
     bgColor: "bg-purple-900/20",
-    tech: ["SCSS", "Express", "Node.js"],
-    description: "Get answers to your kahoot quiz",
+    tech: ["HTML", "Laravel", "Bootstrap", "Javascript", "PHP"],
+    description:
+      "A VTuber agency website built with Laravel and Tailwind CSS, featuring pages for vision, staff, talents, and contact. Designed to showcase the agency’s identity and make it easy for fans and partners to connect.",
     liveLink: "#",
     cachedLink: "#",
   },
@@ -56,23 +60,19 @@ const ProjectCard: React.FC<Project> = ({
   bgColor,
   tech,
   description,
-  liveLink,
+  // liveLink,
 }) => (
   <div className="border border-gray-600 rounded-sm">
     <div
-      className={`p-4 ${bgColor} flex items-center justify-between border-b border-gray-600`}
+      className={`p-4 ${bgColor} flex items-center justify-center border-b border-gray-600`}
     >
-      <h3 className="text-xl text-white font-semibold">{title}</h3>
       {image && (
-        <img
-          src={image}
-          alt={title}
-          className="h-8 object-contain rounded-sm"
-        />
+        <img src={image} alt={title} className=" h-60 w-full rounded-sm" />
       )}
     </div>
     <div className="p-4">
-      <p className="text-gray-400 mb-4">{description}</p>
+      <h3 className="text-xl text-white font-semibold">{title}</h3>
+      <p className="text-gray-400 text-base mb-4">{description}</p>
       <div className="flex flex-wrap gap-2 mb-4">
         {tech.map((t, i) => (
           <span
@@ -84,14 +84,14 @@ const ProjectCard: React.FC<Project> = ({
         ))}
       </div>
       <div className="flex items-center space-x-4">
-        <a
+        {/* <a
           href={liveLink}
           target="_blank"
           rel="noopener noreferrer"
           className="px-4 py-2 border border-teal-400 text-white rounded-sm hover:bg-teal-400/10 transition-colors duration-300"
         >
           Live {"<~>"}
-        </a>
+        </a> */}
       </div>
     </div>
   </div>

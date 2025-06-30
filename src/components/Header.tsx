@@ -35,7 +35,7 @@ const Header = () => {
         return;
       }
 
-      // create the smooth scroller FIRST!
+      // create the smooth scroller
       smoother.current = ScrollSmoother.create({
         wrapper: "#smooth-wrapper",
         content: "#smooth-content",
