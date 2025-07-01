@@ -1,5 +1,5 @@
 // import React from "react";
-import { Github } from "lucide-react";
+// import { Github } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -7,13 +7,14 @@ const Footer = () => {
       <div className="flex flex-col md:flex-row justify-between items-center gap-4">
         <div className="text-center md:text-left">
           <p className="text-white font-semibold">
-            Hafi <span className="text-gray-400">developer.hafi@gmail.com</span>
+            Hafi
+            {/* <span className="text-gray-400">developer.hafi@gmail.com</span> */}
           </p>
           <p className="text-gray-400">
             iOS Devs, Web Devs, and front-end developer
           </p>
         </div>
-        <div>
+        {/* <div>
           <h3 className="text-white text-xl mb-2">Media</h3>
           <div className="flex gap-4">
             <a href="#" aria-label="Github">
@@ -54,7 +55,7 @@ const Footer = () => {
               </svg>
             </a>
           </div>
-        </div>
+        </div> */}
       </div>
       <p className="text-center text-gray-500 mt-8 text-sm">
         &copy; Copyright {new Date().getFullYear()}. Made by Hafi
