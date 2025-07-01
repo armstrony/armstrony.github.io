@@ -1,5 +1,9 @@
 import React from "react";
 import SectionTitle from "./SectionTitle";
+import chromatchImage from "../assets/chromatch.jpeg";
+import cofficeImage from "../assets/coffice.png";
+import meforaImage from "../assets/MeFoRa.png";
+import liviumImage from "../assets/livium.png";
 
 interface Project {
   title: string;
@@ -14,7 +18,7 @@ interface Project {
 const projectsData: Project[] = [
   {
     title: "Chromatch",
-    image: "src/assets/chromatch.jpeg",
+    image: chromatchImage,
     bgColor: "bg-pink-800/50",
     tech: ["Swift", "SwiftUI", "Vision", "SwiftData", "VideoToolbox"],
     description:
@@ -24,7 +28,7 @@ const projectsData: Project[] = [
   },
   {
     title: "Coffice",
-    image: "src/assets/coffice.png",
+    image: cofficeImage,
     bgColor: "bg-green-900/20",
     tech: ["Swift", "SwiftUI", "Core Location", "HealthKit", "Core Motion"],
     description:
@@ -34,7 +38,7 @@ const projectsData: Project[] = [
   },
   {
     title: "MeFoRa",
-    image: "src/assets/MeFoRa.png",
+    image: meforaImage,
     bgColor: "bg-blue-900/20",
     tech: ["Android", "Kotlin", "Jetpack Compose", "Firebase"],
     description:
@@ -44,7 +48,7 @@ const projectsData: Project[] = [
   },
   {
     title: "Project Livium",
-    image: "src/assets/livium.png",
+    image: liviumImage,
     bgColor: "bg-purple-900/20",
     tech: ["HTML", "Laravel", "Bootstrap", "Javascript", "PHP"],
     description:
