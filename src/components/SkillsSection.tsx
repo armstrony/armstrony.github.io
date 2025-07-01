@@ -3,20 +3,19 @@ import SectionTitle from "./SectionTitle";
 
 const skillsData = {
   languages: ["Swift", "Kotlin", "PHP", "JavaScript", "Python", "TypeScript"],
-  databases: ["SQLite", "PostgreSQL", "Mongo"],
+  databases: ["MySQL", "Firebase"],
   tools: [
     "VSCode",
     "Xcode",
-    "Linux",
+    "Terminal",
     "Figma",
     "Git",
     "Trello",
     "Discord",
     "Notion",
   ],
-  other: ["HTML", "CSS", "EJS", "SCSS", "REST", "Jinja"],
+  other: ["HTML", "CSS", "JSON", "XML", "Photoshop"],
   frameworks: [
-    "React",
     "Laravel",
     "Jetpack Compose",
     "SwiftUI",
@@ -65,14 +64,19 @@ const SkillsSection = () => {
             <div className="w-12 h-12"></div>
             <div className="w-12 h-12 border-2 border-gray-600 rotate-45"></div>
             <div className="w-12 h-12 border-2 border-gray-600"></div>
+            <div className="w-24 h-24 border-3 border-gray-600"></div>
+            <div className="w-24 h-24 border-3 border-blue-400 rotate-45"></div>
+            <div className="w-36 h-24 border-3 border-blue-400 rotate-60"></div>
+            <div className="w-64 h-64 border-3 border-blue-400 rotate-45"></div>
+            <div className="w-24 h-24 border-3 border-green-400 rotate-25"></div>
           </div>
         </div>
         <div className="w-full md:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-4">
           <SkillCategory title="Languages" items={skillsData.languages} />
-          <SkillCategory title="Other" items={skillsData.other} />
           <SkillCategory title="Tools" items={skillsData.tools} />
-          <SkillCategory title="Databases" items={skillsData.databases} />
           <SkillCategory title="Frameworks" items={skillsData.frameworks} />
+          <SkillCategory title="Databases" items={skillsData.databases} />
+          <SkillCategory title="Other" items={skillsData.other} />
         </div>
       </div>
     </section>
