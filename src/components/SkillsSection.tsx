@@ -2,20 +2,32 @@ import React from "react";
 import SectionTitle from "./SectionTitle";
 
 const skillsData = {
-  languages: ["TypeScript", "Lua", "Python", "JavaScript"],
+  languages: ["Swift", "Kotlin", "PHP", "JavaScript", "Python", "TypeScript"],
   databases: ["SQLite", "PostgreSQL", "Mongo"],
   tools: [
     "VSCode",
-    "Neovim",
+    "Xcode",
     "Linux",
     "Figma",
-    "XFCE",
-    "Arch",
     "Git",
-    "Font Awesome",
+    "Trello",
+    "Discord",
+    "Notion",
   ],
   other: ["HTML", "CSS", "EJS", "SCSS", "REST", "Jinja"],
-  frameworks: ["React", "Vue", "Disnake", "Discord.js", "Flask", "Express.js"],
+  frameworks: [
+    "React",
+    "Laravel",
+    "Jetpack Compose",
+    "SwiftUI",
+    "SwiftData",
+    "Core Location",
+    "Core Motion",
+    "MapKit",
+    "HealthKit",
+    "Bootstrap",
+    "Tailwind CSS",
+  ],
 };
 
 const SkillCategory: React.FC<{ title: string; items: string[] }> = ({
