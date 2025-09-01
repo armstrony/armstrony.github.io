@@ -10,7 +10,7 @@ const Footer = () => {
             Hafi
             {/* <span className="text-gray-400">developer.hafi@gmail.com</span> */}
           </p>
-          <p className="text-gray-400">
+          <p className="text-gray-300">
             iOS Devs, Web Devs, and front-end developer
           </p>
         </div>
