@@ -4,6 +4,7 @@ import chromatchImage from "../assets/chromatch.jpeg";
 import cofficeImage from "../assets/coffice.png";
 import meforaImage from "../assets/MeFoRa.png";
 import liviumImage from "../assets/livium.png";
+import metain from "../assets/METAIN.png";
 
 interface Project {
   title: string;
@@ -39,10 +40,28 @@ const projectsData: Project[] = [
   {
     title: "MeFoRa",
     image: meforaImage,
-    bgColor: "bg-blue-900/20",
+    bgColor: "bg-sky-800",
     tech: ["Android", "Kotlin", "Jetpack Compose", "Firebase"],
     description:
       "An app that helps users with specific health conditions make informed dietary choices by providing personalized lists of recommended and restricted foods based on their illness.",
+    liveLink: "#",
+    cachedLink: "#",
+  },
+  {
+    title: "METAIN",
+    image: metain,
+    bgColor: "bg-blue",
+    tech: [
+      "MacOS",
+      "SwiftUI",
+      "CoreML",
+      "MapKit",
+      "Charts",
+      "YoLOv11",
+      "Machine Learning",
+    ],
+    description:
+      "META is a macOS application built with SwiftUI that leverages a CoreML‑converted YOLOv11 model to detect vehicles in camera or video feeds. It visualizes traffic density as a heatmap on MapKit, presents interactive charts of volume over time, and exports aggregated data as CSV for further analysis.",
     liveLink: "#",
     cachedLink: "#",
   },
