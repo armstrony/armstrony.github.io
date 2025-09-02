@@ -6,7 +6,7 @@ const HeroSection = () => {
       id="home"
       className="flex flex-col md:flex-row items-center justify-between h-lvh"
     >
-      <div className="mb-10 md:mb-0">
+      <div className="mb-8 md:mb-0">
         <h1 className="text-4xl lg:text-7xl font-bold text-white leading-tight">
           Hello! I'm a <span className="text-teal-400">iOS Developer</span> and{" "}
           <span className="text-teal-400">Web Dev</span> and{" "}
