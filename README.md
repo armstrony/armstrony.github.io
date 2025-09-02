@@ -26,12 +26,12 @@ Visit the live portfolio: [armstrony.github.io](https://armstrony.github.io)
 
 - **React 18** - Modern React with hooks and functional components
 - **TypeScript** - Type-safe JavaScript for better development experience
-- **Tailwind CSS 4.0** - Utility-first CSS framework for rapid styling
-- **Vite** - Next-generation frontend build tool
+- **Tailwind CSS 4.0** - Utility-first CSS framework with Vite integration
+- **Vite 6.0** - Next-generation frontend build tool
 
 ### Animations & Interactions
 
-- **GSAP** - Professional-grade animation library
+- **GSAP 3.13** - Professional-grade animation library with React integration
 - **ScrollTrigger** - Scroll-based animations
 - **ScrollSmoother** - Smooth scrolling experience
 - **React Type Animation** - Typewriter effect animations
@@ -43,9 +43,9 @@ Visit the live portfolio: [armstrony.github.io](https://armstrony.github.io)
 
 ### Development Tools
 
-- **ESLint** - Code linting and formatting
+- **ESLint 9.17** - Code linting and formatting
 - **TypeScript ESLint** - TypeScript-specific linting rules
-- **GitHub Pages** - Deployment and hosting
+- **GitHub Pages** - Deployment and hosting with gh-pages
 
 ## 📁 Project Structure
 
@@ -75,7 +75,8 @@ src/
 ### Prerequisites
 
 - Node.js (version 18 or higher)
-- npm or yarn package manager
+- npm package manager
+- Git for version control
 
 ### Installation
 
@@ -104,10 +105,11 @@ src/
 ### Available Scripts
 
 - `npm run dev` - Start development server with hot reload
-- `npm run build` - Build the project for production
+- `npm run build` - Build the project for production (TypeScript compilation + Vite build)
 - `npm run preview` - Preview the production build locally
 - `npm run lint` - Run ESLint for code quality checks
-- `npm run deploy` - Deploy to GitHub Pages
+- `npm run predeploy` - Automatically runs before deploy (builds the project)
+- `npm run deploy` - Deploy to GitHub Pages using gh-pages
 
 ## 🎨 Customization
 
@@ -121,11 +123,13 @@ src/
 
 ### Styling
 
-The project uses Tailwind CSS for styling. Key design elements:
+The project uses Tailwind CSS 4.0 with Vite integration for styling. Key design elements:
 
 - **Color Scheme**: Dark theme with teal accents (`#282C34` background, `teal-400` highlights)
 - **Typography**: Monospace font family for developer aesthetic
 - **Layout**: Responsive grid system with mobile-first approach
+- **Animations**: GSAP-powered smooth scrolling with ScrollSmoother and ScrollTrigger
+- **Interactive Elements**: Hover effects and smooth transitions throughout
 
 ### Adding New Sections
 
@@ -137,11 +141,11 @@ The project uses Tailwind CSS for styling. Key design elements:
 
 The portfolio showcases several key projects:
 
-- **Chromatch** - iOS app for personal color season discovery (Swift, SwiftUI, Vision)
-- **Coffice** - Coffee shop finder for Green Office Park (Swift, SwiftUI, Core Location)
-- **MeFoRa** - Health-focused dietary recommendation app (Android, Kotlin, Jetpack Compose)
-- **METAIN** - Traffic analysis with ML and heatmap visualization (macOS, SwiftUI, CoreML)
-- **Project Livium** - VTuber agency website (Laravel, PHP, Bootstrap)
+- **Chromatch** - iOS app for personal color season discovery using computer vision (Swift, SwiftUI, Vision, SwiftData, VideoToolbox)
+- **Coffice** - Coffee shop finder for Green Office Park with health integration (Swift, SwiftUI, Core Location, HealthKit, Core Motion)
+- **MeFoRa** - Health-focused dietary recommendation app for specific medical conditions (Android, Kotlin, Jetpack Compose, Firebase)
+- **METAIN** - Traffic analysis with YOLOv11 ML model and heatmap visualization (macOS, SwiftUI, CoreML, MapKit, Charts)
+- **Project Livium** - VTuber agency website with modern web technologies (Laravel, PHP, Bootstrap, JavaScript)
 
 ## 🌐 Deployment
 
