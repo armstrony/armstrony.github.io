@@ -87,16 +87,22 @@ const ProjectCard: React.FC<Project> = ({
 }) => (
   <div className="border border-gray-600 rounded-sm">
     <div
-      className={`p-4 ${bgColor} flex items-center justify-center border-b border-gray-600`}
+      className={`p-2 md:p-4 ${bgColor} flex items-center justify-center border-b border-gray-600`}
     >
       {image && (
-        <img src={image} alt={title} className=" h-60 w-full rounded-sm" />
+        <img
+          src={image}
+          alt={title}
+          className="h-40 md:h-60 w-full rounded-sm object-cover"
+        />
       )}
     </div>
-    <div className="p-4">
-      <h3 className="text-xl text-white font-semibold">{title}</h3>
-      <p className="text-gray-400 text-base mb-4">{description}</p>
-      <div className="flex flex-wrap gap-2 mb-4">
+    <div className="p-3 md:p-4">
+      <h3 className="text-lg md:text-xl text-white font-semibold">{title}</h3>
+      <p className="text-gray-400 text-sm md:text-base mb-3 md:mb-4 line-clamp-3">
+        {description}
+      </p>
+      <div className="flex flex-wrap gap-1 md:gap-2 mb-3 md:mb-4">
         {tech.map((t, i) => (
           <span
             key={i}
@@ -122,9 +128,9 @@ const ProjectCard: React.FC<Project> = ({
 
 const ProjectsSection = () => {
   return (
-    <section id="projects" className="py-20">
+    <section id="projects" className="py-12 md:py-20 px-4 md:px-0">
       <SectionTitle title="projects" showViewAll={true} />
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
         {projectsData.map((project) => (
           <ProjectCard key={project.title} {...project} />
         ))}

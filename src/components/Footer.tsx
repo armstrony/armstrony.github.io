@@ -3,14 +3,14 @@
 
 const Footer = () => {
   return (
-    <footer className="border-t border-gray-700 mt-20 py-8">
+    <footer className="border-t border-gray-700 mt-12 md:mt-20 py-6 md:py-8 px-4 md:px-0">
       <div className="flex flex-col md:flex-row justify-between items-center gap-4">
         <div className="text-center md:text-left">
-          <p className="text-white font-semibold">
+          <p className="text-white font-semibold text-sm md:text-base">
             Hafi
             {/* <span className="text-gray-400">developer.hafi@gmail.com</span> */}
           </p>
-          <p className="text-gray-300">
+          <p className="text-gray-300 text-sm md:text-base">
             iOS Devs, Web Devs, and front-end developer
           </p>
         </div>
@@ -57,7 +57,7 @@ const Footer = () => {
           </div>
         </div> */}
       </div>
-      <p className="text-center text-gray-500 mt-8 text-sm">
+      <p className="text-center text-gray-500 mt-6 md:mt-8 text-xs md:text-sm">
         &copy; Copyright {new Date().getFullYear()}. Made by Hafi
       </p>
     </footer>

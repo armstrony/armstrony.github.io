@@ -1,13 +1,15 @@
-import { useRef, MutableRefObject, useEffect } from "react";
+import { useRef, MutableRefObject, useEffect, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
 import { useGSAP } from "@gsap/react";
+import { Menu, X } from "lucide-react";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother);
 
 const Header = () => {
   const navLinks = ["#projects", "#skills", "#about-me", "#contacts"];
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   // Properly type the refs
   const main = useRef<HTMLElement>(null);
@@ -19,6 +21,8 @@ const Header = () => {
       const cleanTarget = target.startsWith("#") ? target.substring(1) : target;
       smoother.current.scrollTo(`#${cleanTarget}`, true, "top top");
     }
+    // Close mobile menu after navigation
+    setIsMobileMenuOpen(false);
   };
 
   useEffect(() => {
@@ -76,8 +80,13 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="flex justify-between items-center py-8" ref={main}>
-      <div className="text-2xl font-bold text-white">Hafi</div>
+    <header
+      className="flex justify-between items-center py-4 md:py-8 px-4 md:px-0"
+      ref={main}
+    >
+      <div className="text-xl md:text-2xl font-bold text-white">Hafi</div>
+
+      {/* Desktop Navigation */}
       <nav className="hidden md:flex items-center space-x-8">
         {navLinks.map((link) => (
           <a
@@ -86,7 +95,7 @@ const Header = () => {
             className="hover:text-teal-400 transition-colors duration-300"
             onClick={(e) => {
               e.preventDefault();
-              scrollTo(link); // Pass the actual link target
+              scrollTo(link);
             }}
           >
             <span className="text-teal-400">#</span>
@@ -94,6 +103,37 @@ const Header = () => {
           </a>
         ))}
       </nav>
+
+      {/* Mobile Menu Button */}
+      <button
+        className="md:hidden text-white p-2"
+        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        aria-label="Toggle mobile menu"
+      >
+        {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+      </button>
+
+      {/* Mobile Navigation */}
+      {isMobileMenuOpen && (
+        <nav className="absolute top-full left-0 right-0 bg-gray-800/95 backdrop-blur-sm border-t border-gray-600 md:hidden z-50">
+          <div className="flex flex-col space-y-4 p-4">
+            {navLinks.map((link) => (
+              <a
+                key={link}
+                href={link}
+                className="hover:text-teal-400 transition-colors duration-300 text-center py-2"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollTo(link);
+                }}
+              >
+                <span className="text-teal-400">#</span>
+                {link.substring(1)}
+              </a>
+            ))}
+          </div>
+        </nav>
+      )}
     </header>
   );
 };
